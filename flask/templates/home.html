@@ -1,0 +1,144 @@
+<html>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type=text/javascript src="{{url_for('static', filename='js/plot.js') }}"></script>
+<style>
+</style>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+
+</head>
+
+
+       
+
+            <body style="background-color:white;">
+
+                      
+	<div id=parent_div >
+	
+	<input type="button0" name="answer" value=" Welcome to ONE lab Data analysis platform"  />
+
+		      <form  action="/">
+                         <input type="submit"  class='refresh_button' value="HOME" />
+          </form>  
+
+		<div id='div1'  >
+                <button class='button' >Show plot! </button> <!-- <a href="/">Go back</a> -->
+          <!--      <form action="/">
+                         <input type="submit" value="Go back!" />
+	  </form>  -->
+                </div>
+
+		<div id='div2'>
+		
+			<input type="button1" name="answer" value=" Run 2d pca (Input file format = .csv)" onclick="showDiv1()" />
+			<div id='div_1' style="display:none;" class="answer_list" >
+        	        <form   action="/pca2d" method="post" enctype="multipart/form-data">
+                	    <input type="file" name="data_file" />
+                   	 <input type="submit" />  
+			  <!-- <progress id="file" value="32" max="100"> 32% </progress> -->
+               		 </form>
+			</div>
+			
+			
+
+			 
+			
+
+              
+
+                        <input type="button2" name="answer" value=" Run 3d pca (Input file format = .csv)" onclick="showDiv2()" />
+                        <div id='div_2' style="display:none;" class="answer_list" >
+                        <form   action="/pca3d" method="post" enctype="multipart/form-data">
+                            <input type="file" name="data_file" />
+                         <input type="submit" />
+                          <!-- <progress id="file" value="32" max="100"> 32% </progress> -->
+                         </form>
+                        </div>
+
+            		
+
+			<input type="button3" name="answer" value=" Run Macro (Nitrate-sensor) (Input file format = .csv) " onclick="showDiv3()" />
+                        <div id='div_3' style="display:none;" class="answer_list" >
+                        <form   action="/Nitrate" method="post" enctype="multipart/form-data">
+                            <input type="file" name="data_file" />
+                         <input type="submit" />
+                          <!-- <progress id="file" value="32" max="100"> 32% </progress> -->
+                         </form>
+                        </div>
+
+
+
+
+                       <input type="button4" name="answer" value=" Run excel to csv converter (Input file format = .xlsx)" onclick="showDiv4()" />
+                        <div id='div_4' style="display:none;" class="answer_list" >
+                        <form   action="/xlsx_to_csv" method="post" enctype="multipart/form-data">
+                            <input type="file" name="data_file" />
+                         <input type="submit" />
+                          <!-- <progress id="file" value="32" max="100"> 32% </progress> -->
+                         </form>
+                        </div>
+               
+
+			<input type="button5" name="answer" value=" Run csv to excel converter (Input file format = .xlsx)" onclick="showDiv5()" />
+                        <div id='div_5' style="display:none;" class="answer_list" >
+                        <form   action="/csv_to_xlsx" method="post" enctype="multipart/form-data">
+                            <input type="file" name="data_file" />
+                         <input type="submit" />
+                          <!-- <progress id="file" value="32" max="100"> 32% </progress> -->
+                         </form>
+                        </div>
+
+               
+            
+                
+
+                <input type="button6" name="answer" value=" Sutripto automated  script" onclick="showDiv6()" />
+		<div id='div_6' style="display:none;" class="answer_list" >
+                <form  action="/sutripto" method="post" enctype="multipart/form-data">
+                    <input type="file" name="data_file" />
+                    <input type="number" placeholder="t-value" step="0.0001" min="0" max="50"  name="quantity" >
+                    <input type="submit" />
+                </form>
+		</div>
+
+
+                       <input type="button7" name="answer" value=" 2d plot (Input file format = .csv)" onclick="showDiv7()" />
+                        <div id='div_7' style="display:none;" class="answer_list" >
+                        <form   action="/plot2d" method="post" enctype="multipart/form-data">
+                            <input type="file" name="data_file" />
+                         <input type="submit" />
+                          <!-- <progress id="file" value="32" max="100"> 32% </progress> -->
+                         </form>
+                        </div>
+
+                       <input type="button8" name="answer" value=" 3d plot (Input file format = .csv)" onclick="showDiv8()" />
+                        <div id='div_8' style="display:none;" class="answer_list" >
+                        <form   action="/plot3d" method="post" enctype="multipart/form-data">
+                            <input type="file" name="data_file" />
+                         <input type="submit" />
+                          <!-- <progress id="file" value="32" max="100"> 32% </progress> -->
+                         </form>
+                        </div>
+
+
+
+
+	<!--		<form  action="/plot" method="get" >
+                    <input type="submit" formtarget=”_blank” />
+                </form>
+		
+	<a action="/plot" target="popup" >abc</a> -->
+		</div>
+	</div>	
+	
+	
+
+
+        
+
+            </body>
+        </html>
+
